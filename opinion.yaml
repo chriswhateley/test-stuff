@@ -39,7 +39,7 @@ graph:
       - unittest
     on_error:
       - notify
-    next: bake
+#    next: bake
   bake:
     has:
       - docker_build
