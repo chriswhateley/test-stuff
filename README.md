@@ -10,3 +10,5 @@ Coveralls: [![Coverage Status](https://coveralls.io/repos/github/chriswhateley/t
 
 # test-stuff
 Dummy repo for testing integrations or other solutions needing a repo
+
+Hi Mike
