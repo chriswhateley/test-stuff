@@ -39,8 +39,6 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: | 
-      echo "Hello ${{ inputs.name }}"
-      jf rt rpt .
-
-
+    - run: echo "Hello ${{ inputs.name }}"
+    - run: jf rt rpt .
+    - run: echo "🎉 The OIDC setup was complete."
