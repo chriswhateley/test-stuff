@@ -1,4 +1,4 @@
-name: Manual workflow
+name: OIDC Tests
 
 permissions:
   id-token: write # This is required for requesting the JWT
@@ -24,11 +24,11 @@ on:
 jobs:
   setup jf cli:
     - uses: jfrog/setup-jfrog-cli@v4
-        env:
-            JF_URL: https://psazuse.jfrog.io
-        with:
-            oidc-provider-name: chriswhgithub 
-            oidc-audience: internal
+      env:
+        JF_URL: https://psazuse.jfrog.io
+      with:
+        oidc-provider-name: chriswhgithub 
+        oidc-audience: internal
   
   # This workflow contains a single job called "greet"
   verify:    
