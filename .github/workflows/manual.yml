@@ -8,23 +8,21 @@ permissions:
         
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  setup jf cli:
-    - uses: jfrog/setup-jfrog-cli@v4
-      env:
-        JF_URL: https://psazuse.jfrog.io
-      with:
-        oidc-provider-name: chriswhgithub 
-        oidc-audience: internal
-  
-  # This workflow contains a single job called "greet"
-  verify:    
-    # The type of runner that the job will run on
+  oidc_experiments:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Runs a single command using the runners shell
-    - name: Send greeting
-    - run: echo "Hello ${{ inputs.name }}"
-    - run: jf rt rpt .
-    - run: echo "🎉 The OIDC setup was complete."
+      -name: Setup OIDC
+         - uses: jfrog/setup-jfrog-cli@v4
+         env:
+           JF_URL: https://psazuse.jfrog.io
+         with:
+           oidc-provider-name: chriswhgithub 
+           oidc-audience: internal
+
+      # Runs a single command using the runners shell
+      - name: Send greeting
+      - run: echo "Hello ${{ inputs.name }}"
+      - run: jf rt rpt .
+      - run: echo "🎉 The OIDC setup was complete."
