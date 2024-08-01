@@ -22,7 +22,6 @@ jobs:
           oidc-audience: internal
 
       # Runs a single command using the runners shell
-      - name: Send greeting
       - run: echo "Hello ${{ inputs.name }}"
       - run: jf --version
       - run: jf rt rpt .
