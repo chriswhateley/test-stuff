@@ -13,13 +13,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      -name: Setup OIDC
-       uses: jfrog/setup-jfrog-cli@v4
-       env:
-         JF_URL: https://psazuse.jfrog.io
-       with:
-         oidc-provider-name: chriswhgithub 
-         oidc-audience: internal
+      - name: Setup OIDC
+        uses: jfrog/setup-jfrog-cli@v4
+        env:
+          JF_URL: https://psazuse.jfrog.io
+        with:
+          oidc-provider-name: chriswhgithub 
+          oidc-audience: internal
 
       # Runs a single command using the runners shell
       - name: Send greeting
