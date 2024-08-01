@@ -14,7 +14,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       -name: Setup OIDC
-       uses: jfrog/setup-jfrog-cli@v3
+       uses: jfrog/setup-jfrog-cli@v4
        env:
          JF_URL: https://psazuse.jfrog.io
        with:
@@ -24,5 +24,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Send greeting
       - run: echo "Hello ${{ inputs.name }}"
+      - run: jf --version
       - run: jf rt rpt .
       - run: echo "🎉 The OIDC setup was complete."
