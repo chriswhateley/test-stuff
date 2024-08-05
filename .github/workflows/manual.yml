@@ -18,7 +18,7 @@ jobs:
         env:
           JF_URL: https://psazuse.jfrog.io
         with:
-          oidc-provider-name: github 
+          oidc-provider-name: chriswhgithub 
           oidc-audience: jfrog-github
 
       - name: Hello
@@ -29,7 +29,9 @@ jobs:
         run: jf --version
 
       - name: JF Work  
-        run: jf rt rpt .
+        run: |
+         jf rt bce
+         jf rt bag
 
       - name: Done  
         run: echo "🎉 The OIDC setup was complete."
