@@ -18,7 +18,7 @@ jobs:
         env:
           JF_URL: https://psazuse.jfrog.io
         with:
-          oidc-provider-name: chriswhgithub 
+          oidc-provider-name: github 
           oidc-audience: internal
 
       # Runs a single command using the runners shell
