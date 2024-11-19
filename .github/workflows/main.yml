@@ -10,6 +10,8 @@ on:
       artifact_path: 
         required: true 
         type: string
+    # ref:
+    #   type: string
 jobs:
   build:
     runs-on: ubuntu-latest
