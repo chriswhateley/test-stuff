@@ -13,11 +13,10 @@ on:
       artifact_path: 
         required: true 
         type: string
-    # ref:
-    #   type: string
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Print artifact_path
-        run: echo  The path is ${{ inputs.artifact_path }} and payload ${{artifact_path}}
+        run: echo  The path is ${{ inputs.artifact_path }} 
