@@ -3,7 +3,8 @@ name: artifact_promoted
 on:
   # workflow_dispatch is mandatory, so that Artifactory can trigger
   # the workflow through GitHub REST API.
-  workflow_dispatch: 
+  # workflow_dispatch: 
+  repository_dispatch:
     # inputs are optional, they may be used to convey contextual data
     # from the JFrog event to the workflow.
     inputs:
