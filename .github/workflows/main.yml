@@ -20,4 +20,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print artifact_path
-        run: echo  The path is ${{ inputs.artifact_path }} and payload ${{client_payload.artifact_path}}
+        run: echo  The path is ${{ inputs.artifact_path }} and payload ${{artifact_path}}
