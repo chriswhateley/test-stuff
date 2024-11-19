@@ -5,8 +5,10 @@ on:
   # the workflow through GitHub REST API.
   # workflow_dispatch: 
   repository_dispatch:
+    types: [bundle_distribution]
     # inputs are optional, they may be used to convey contextual data
     # from the JFrog event to the workflow.
+    
     inputs:
       artifact_path: 
         required: true 
