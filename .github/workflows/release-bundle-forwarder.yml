@@ -12,7 +12,7 @@ on:
         default: '/'
 
 jobs:
-  say_hello:
+  forward_bundle:
     runs-on: ubuntu-latest
     steps:
     - run: |
