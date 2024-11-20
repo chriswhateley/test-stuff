@@ -1,0 +1,20 @@
+name: Release Bundle forwarding workflow
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Bundle to forward'
+        required: true
+        default: 'default bundle'
+      repo:
+        path: '/repopath'
+        required: false
+        default: '/'
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Forwarding bundle: $!"
+        echo "- in $!"
