@@ -21,4 +21,4 @@ jobs:
     steps:
     - run: |
         echo "Forwarding bundle: ${{inputs.repo}} from ${{inputs.artifact_path}}"
-        echo "- in $!"
+        echo "Data: ${{inputs.name}}"
