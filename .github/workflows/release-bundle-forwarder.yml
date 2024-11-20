@@ -20,5 +20,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Forwarding bundle: ${{inputs.repo}} version ${{inputs.bundle_version}} from ${{inputs.name}}"
+        echo "Forwarding bundle: ${{inputs.release_bundle}} version [${{inputs.bundle_version}}] from ${{inputs.name}}"
         echo "Data: ${{inputs.name}}"
