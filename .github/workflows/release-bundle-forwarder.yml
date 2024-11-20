@@ -20,5 +20,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Forwarding bundle: ${{inputs.repo}}"
+        echo "Forwarding bundle: ${{inputs.repo}} from ${{inputs.artifact_path}}"
         echo "- in $!"
