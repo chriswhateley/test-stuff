@@ -6,10 +6,10 @@ on:
         description: 'Bundle to forward'
         required: true
         default: 'default bundle'
-      repo:
-        description: 'Repo path'
+      release_bundle:
         required: false
-        default: '/'
+      bundle_version:
+        required: false
       artifact_path:
         description: 'Artifact path'
         required: false
@@ -20,5 +20,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Forwarding bundle: ${{inputs.repo}} from ${{inputs.artifact_path}}"
+        echo "Forwarding bundle: ${{inputs.repo}} version ${{inputs.bundle_version}} from ${{inputs.name}}"
         echo "Data: ${{inputs.name}}"
