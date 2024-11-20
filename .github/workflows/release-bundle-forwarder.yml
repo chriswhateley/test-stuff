@@ -7,7 +7,11 @@ on:
         required: true
         default: 'default bundle'
       repo:
-        path: '/repopath'
+        description: 'Repo path'
+        required: false
+        default: '/'
+      artifact_path:
+        description: 'Artifact path'
         required: false
         default: '/'
 
@@ -16,5 +20,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Forwarding bundle: $!"
+        echo "Forwarding bundle: ${{inputs.repo}}"
         echo "- in $!"
