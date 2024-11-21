@@ -62,8 +62,9 @@ jobs:
         oidc-provider-name: chriswhgithub 
         oidc-audience: jfrog-github
 
+    # ${{inputs.bundle_version}} seems to be "<no value>" so hardcoding till we figure that out
     - name: Export bundle
-      run: jf rbe ${{inputs.release_bundle}} ${{inputs.bundle_version}}
+      run: jf rbe ${{inputs.release_bundle}} chriswh-export-1 
 
     - name: Extract signing key
       run: echo "Pulling signing keys"
