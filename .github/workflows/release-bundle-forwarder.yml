@@ -27,7 +27,19 @@ jobs:
       run: |
         echo "Forwarding bundle: ${{inputs.release_bundle}} version [${{inputs.bundle_version}}] from ${{inputs.name}}"
         echo "Data: ${{inputs.name}}"
-
+    
+    - name: Debugging oidc
+      uses: actions/github-script@v6
+          id: script
+          timeout-minutes: 10
+          with:
+            debug: true
+            script: |
+              const token = process.env['ACTIONS_RUNTIME_TOKEN']
+              const runtimeUrl = process.env['ACTIONS_ID_TOKEN_REQUEST_URL']
+              core.setOutput('TOKEN', token.trim())
+              core.setOutput('IDTOKENURL', runtimeUrl.trim())
+  
     - name: Setup OIDC
       uses: jfrog/setup-jfrog-cli@v4
       env:
