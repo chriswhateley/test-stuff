@@ -32,16 +32,13 @@ jobs:
         oidc-audience: jfrog-github
 
     - name: Export bundle
-      run: |
-      jf rbe ${{inputs.release_bundle}} ${{inputs.bundle_version}}
+      run: jf rbe ${{inputs.release_bundle}} ${{inputs.bundle_version}}
 
     - name: Extract signing key
-      run: |
-        echo "Pulling signing keys"
+      run: echo "Pulling signing keys"
 
     - name: Import signing keys
-      run: |
-        echo "Push signing keys to target instance"
+      run: echo "Push signing keys to target instance"
 
     - name: Import bundle to target node
       run: |
