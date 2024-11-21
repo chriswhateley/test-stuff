@@ -22,3 +22,31 @@ jobs:
     - run: |
         echo "Forwarding bundle: ${{inputs.release_bundle}} version [${{inputs.bundle_version}}] from ${{inputs.name}}"
         echo "Data: ${{inputs.name}}"
+
+    - name: Setup OIDC
+      uses: jfrog/setup-jfrog-cli@v4
+      env:
+        JF_URL: https://psazuse.jfrog.io
+      with:
+        oidc-provider-name: chriswhgithub 
+        oidc-audience: jfrog-github
+
+    - name: Export bundle
+      run: |
+      jf rbe ${{inputs.release_bundle}} ${{inputs.bundle_version}}
+
+    - name: Extract signing key
+      run: |
+        echo "Pulling signing keys"
+
+    - name: Import signing keys
+      run: |
+        echo "Push signing keys to target instance"
+
+    - name: Import bundle to target node
+      run: |
+        echo "Importing bundle"
+        jf rbi ./bundlename.zip
+
+        
+      
