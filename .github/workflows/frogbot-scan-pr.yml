@@ -42,6 +42,8 @@ jobs:
 
       - uses: jfrog/frogbot@8fbeca612957ae5f5f0c03a19cb6e59e237026f3  # v2.10.0
         env:
+          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+          
           # [Mandatory if the two conditions below are met]
           # 1. The project uses npm, yarn 2, NuGet or .NET to download its dependencies
           # 2. The `installCommand` variable isn't set in your frogbot-config.yml file.
