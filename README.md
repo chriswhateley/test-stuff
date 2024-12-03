@@ -11,4 +11,4 @@ Coveralls: [![Coverage Status](https://coveralls.io/repos/github/chriswhateley/t
 # test-stuff
 Dummy repo for testing integrations or other solutions needing a repo
 
-Making some change to trigger frogbot action
+Making some change to trigger frogbot action...
