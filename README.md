@@ -1,8 +1,8 @@
-[![Run Status](https://api.shippable.com/projects/5909c1594ff18d0700264aaa/badge?branch=master)](https://app.shippable.com/github/chriswhateley/test-stuff)
+[![Release Bundle forwarding workflow](https://github.com/chriswhateley/test-stuff/actions/workflows/release-bundle-forwarder.yml/badge.svg)](https://github.com/chriswhateley/test-stuff/actions/workflows/release-bundle-forwarder.yml)
 
-[![Coverage Badge](https://api.shippable.com/projects/5909c1594ff18d0700264aaa/coverageBadge?branch=master)](https://app.shippable.com/github/chriswhateley/test-stuff)
-
-[![Build Status](https://travis-ci.org/chriswhateley/test-stuff.svg?branch=master)](https://travis-ci.org/chriswhateley/test-stuff)
+[![Frogbot Scan Pull Request](https://github.com/chriswhateley/test-stuff/actions/workflows/frogbot-1-scan-pr.yml/badge.svg)](https://github.com/chriswhateley/test-stuff/actions/workflows/frogbot-1-scan-pr.yml)
 
 # test-stuff
 Dummy repo for testing integrations or other solutions needing a repo
+
+Making some change to trigger frogbot action...
